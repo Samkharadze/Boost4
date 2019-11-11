@@ -2,9 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\include",
-    "\\misc",
-    "\\sources"
+    "\\tools",
+    "\\tools\\gate"
   ],
-  "SelectedNode": "\\sources\\SourceP.cpp",
+  "SelectedNode": "\\include",
   "PreviewInSolutionExplorer": false
 }

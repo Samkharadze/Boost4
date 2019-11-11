@@ -12,7 +12,7 @@ void dirparser::parse()
 {
     if (!fs::exists(m_path))
 	{
-        throw std::exception("path is not exists");
+    throw std::runtime_error("path is not exists");
     }
     for (const fs::directory_entry& x : fs::directory_iterator{m_path})
     {
@@ -20,11 +20,6 @@ void dirparser::parse()
     }
 }
 
-/* Primer:
-broker:ib account:00001234 files:10 lastdate:20181017
-broker:ib account:00001356 files:7 lastdate:20181018
-broker:bcs account:12341356 files:8 lastdate:20181016
-*/
 
 void dirparser::print_info()
 {
@@ -78,7 +73,7 @@ void dirparser::check_path(fs::path value)
     }
     else
     {
-        throw std::exception("incorrect object");
+      throw std::runtime_error("incorrect object");
     }
 }
 
@@ -128,7 +123,7 @@ int main(int argc, char *argv[])
     parser.parse();
     parser.print_info();
   } 
-  catch (const std::exception &ex)
+  catch (const std::runtime_error & ex)
   {
     std::cerr << ex.what() << std::endl;
   }

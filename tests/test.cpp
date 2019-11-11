@@ -1,7 +1,7 @@
 // Copyright 2018 Your Name <your_email>
 
 #include <gtest/gtest.h>
-#include <header.hpp>
+#include <HeaderP.h>
 
 TEST(Boost4, test1)
 {
