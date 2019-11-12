@@ -4,8 +4,9 @@
 #include <HeaderP.h>
 
 TEST(Boost4, test1)
-{
-    std::string ftp_path = "../misc/ftp/";
-    fillup(ftp_path);
-    EXPECT_EQ(brokers.size(), 3);  
+ {
+		string path_to_ftp = "../";
+		fileFind(path_to_ftp, path_to_ftp.length() + 1);
+		FileGet();
+		EXPECT_EQ(brokers.size(), 3);
 }
