@@ -110,7 +110,7 @@ std::string dirparser::get_brocker_name(boost::filesystem::path &dir)
     return std::string();
 }
 
-int main(int argc, char *argv[])
+/*int main(int argc, char *argv[])
 {
   if (argc < 2) 
   {
@@ -133,4 +133,4 @@ int main(int argc, char *argv[])
   }
   std::cin.get();
   return 0;
-}
+}*/
