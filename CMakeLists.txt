@@ -31,10 +31,11 @@ find_package(Boost CONFIG REQUIRED system filesystem regex)
 find_package(Threads)
 
 # TODO: change template word to project name and delete this comment
-add_library(Boost4 STATIC
+add_library(${PROJECT_NAME}
         # enum your files and delete this comment
-        ${CMAKE_CURRENT_SOURCE_DIR}
-        include/HeaderP.h)
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/HeaderP.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/sources/SourceP.cpp
+)
 
 target_link_libraries(
         ${PROJECT_NAME}
