@@ -113,7 +113,7 @@ std::string dirparser::get_brocker_name(boost::filesystem::path &dir)
 int main(int argc, char **argv)
 {
 	std::string path_to_ftp;
-	if (argc == 2) 
+	if (argc < 2) 
 	{
 		path_to_ftp = std::string(argv[1]);
 	}
