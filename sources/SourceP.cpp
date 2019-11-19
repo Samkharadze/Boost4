@@ -1,6 +1,7 @@
 #include <boost/regex.hpp>
 #include <algorithm>
 #include "HeaderP.h"
+
 using namespace boost::filesystem;
 
 dirparser::dirparser(std::string path): m_path(path)
@@ -109,28 +110,14 @@ std::string dirparser::get_brocker_name(boost::filesystem::path &dir)
 
     return std::string();
 }
-
-/*int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-  if (argc < 2) 
-  {
-    std::cerr << "error" << std::endl;
-    return 1;
-  }
-  try
-  {
-    dirparser parser(argv[1]);
-    parser.parse();
-    parser.print_info();
-  } 
-  catch (const std::runtime_error & ex)
-  {
-    std::cerr << ex.what() << std::endl;
-  }
-  catch (...)
-  {
-    std::cerr << "unknown exception" << std::endl;
-  }
-  std::cin.get();
-  return 0;
-}*/
+	string path_to_ftp;
+	if (argc == 2) {
+		path_to_ftp = string(argv[1]);
+	}
+	else
+	{
+		path_to_ftp = "../";
+	}
+}
