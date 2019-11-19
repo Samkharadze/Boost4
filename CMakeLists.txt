@@ -33,7 +33,7 @@ find_package(Threads)
 # TODO: change template word to project name and delete this comment
 add_library(Boost4 STATIC
         # enum your files and delete this comment
-        ${CMAKE_CURRENT_SOURCE_DIR}/sources/SourceP.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}
         include/HeaderP.h)
 
 target_link_libraries(
@@ -47,6 +47,11 @@ add_executable(tests
         # TODO: enum your files and delete this comment
         ${CMAKE_CURRENT_SOURCE_DIR}/tests/test.cpp
         )
+	
+
+add_executable(demo
+		/sources/SourceP.cpp
+		)
 
 # TODO: change template word to project name and delete this comment
 target_include_directories(Boost4
