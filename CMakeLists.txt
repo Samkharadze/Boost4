@@ -49,8 +49,9 @@ add_executable(tests
         )
 	
 
-add_executable(demo
-		/sources/SourceP.cpp
+add_executable(
+  ${PROJECT_NAME}Demo
+  ${CMAKE_CURRENT_SOURCE_DIR}/sources/SourceP.cpp
 		)
 
 # TODO: change template word to project name and delete this comment
