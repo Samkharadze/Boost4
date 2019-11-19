@@ -44,16 +44,22 @@ target_link_libraries(
         Boost::regex
 )
 
+add_executable(
+  ${PROJECT_NAME}Demo
+  ${CMAKE_CURRENT_SOURCE_DIR}/sources/SourceP.cpp
+		)
+
+target_link_libraries(
+  ${PROJECT_NAME}Demo
+  ${PROJECT_NAME}
+)
+
 add_executable(tests
         # TODO: enum your files and delete this comment
         ${CMAKE_CURRENT_SOURCE_DIR}/tests/test.cpp
         )
 	
 
-add_executable(
-  ${PROJECT_NAME}Demo
-  ${CMAKE_CURRENT_SOURCE_DIR}/sources/SourceP.cpp
-		)
 
 # TODO: change template word to project name and delete this comment
 target_include_directories(Boost4
