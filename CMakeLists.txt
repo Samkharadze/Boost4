@@ -29,47 +29,27 @@ find_package(GTest CONFIG REQUIRED)
 find_package(Boost CONFIG REQUIRED filesystem regex)
 find_package(Threads)
 
-<<<<<<< HEAD
 add_library(
   ${PROJECT_NAME}
   ${CMAKE_CURRENT_SOURCE_DIR}/sources/main.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/sources/SourceP.cpp
 )
-=======
-# TODO: change template word to project name and delete this comment
-add_library(${PROJECT_NAME}
-        # enum your files and delete this comment
-        ${CMAKE_CURRENT_SOURCE_DIR}/include/HeaderP.h
-        ${CMAKE_CURRENT_SOURCE_DIR}/sources/SourceP.cpp
-)
-
->>>>>>> 587ba867ba850d16d30bb02c3b2f916129d9403f
 target_link_libraries(
-        ${PROJECT_NAME}
-        Boost::system
-        Boost::filesystem
-        Boost::regex
+  ${PROJECT_NAME}
+  Boost::system
+  Boost::filesystem
+  Boost::regex
 )
-
-<<<<<<< HEAD
 
 add_executable(
   ${PROJECT_NAME}Demo
   ${CMAKE_CURRENT_SOURCE_DIR}/sources/main.cpp
 )
-=======
-add_executable(
-  ${PROJECT_NAME}Demo
-  ${CMAKE_CURRENT_SOURCE_DIR}/sources/SourceP.cpp
-		)
-
->>>>>>> 587ba867ba850d16d30bb02c3b2f916129d9403f
 target_link_libraries(
   ${PROJECT_NAME}Demo
   ${PROJECT_NAME}
 )
 
-<<<<<<< HEAD
 
 add_executable(
   tests
@@ -96,24 +76,6 @@ target_link_libraries(
   GTest::main
   ${PROJECT_NAME}
 )
-=======
-add_executable(tests
-        # TODO: enum your files and delete this comment
-        ${CMAKE_CURRENT_SOURCE_DIR}/tests/test.cpp
-        )
-	
-
-
-# TODO: change template word to project name and delete this comment
-target_include_directories(Boost4
-        PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include
-        )
-target_include_directories(tests
-        PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include
-        )
-# TODO: change template word to project name and delete this comment
-target_link_libraries(tests GTest::main Boost4)
->>>>>>> 587ba867ba850d16d30bb02c3b2f916129d9403f
 
 enable_testing()
 add_test(NAME unit_tests COMMAND tests)
@@ -127,8 +89,4 @@ if (BUILD_COVERAGE)
   add_coverage(tests)
   list(APPEND LCOV_REMOVE_PATTERNS "'${PROJECT_SOURCE_DIR}/tests/*'")
   coverage_evaluate()
-<<<<<<< HEAD
 endif ()
-=======
-endif()
->>>>>>> 587ba867ba850d16d30bb02c3b2f916129d9403f
