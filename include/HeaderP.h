@@ -1,3 +1,7 @@
+#pragma once
+#ifndef HeaderP.h
+#define HeaderP.h
+
 #include <iostream>
 #include <exception>
 #include <string>
