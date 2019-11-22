@@ -36,7 +36,6 @@ add_library(
 )
 target_link_libraries(
   ${PROJECT_NAME}
-  Boost::system
   Boost::filesystem
   Boost::regex
 )
