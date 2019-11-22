@@ -36,6 +36,7 @@ add_library(
 )
 target_link_libraries(
   ${PROJECT_NAME}
+  Boost::system
   Boost::filesystem
   Boost::regex
 )
@@ -50,8 +51,12 @@ target_link_libraries(
 )
 
 add_executable(
-${PROJECT_NAME}
+${PROJECT_NAME}Demo1
 ${CMAKE_CURRENT_SOURCE_DIR}/sources/SourceP.cpp
+)
+target_link_libraries(
+  ${PROJECT_NAME}Demo1
+  ${PROJECT_NAME}
 )
 
 
