@@ -49,14 +49,14 @@ target_link_libraries(
   ${PROJECT_NAME}
 )
 
-add_executable(
-${PROJECT_NAME}Demo1
-${CMAKE_CURRENT_SOURCE_DIR}/sources/SourceP.cpp
-)
-target_link_libraries(
-  ${PROJECT_NAME}Demo1
-  ${PROJECT_NAME}
-)
+#add_executable(
+#${PROJECT_NAME}Demo1
+#${CMAKE_CURRENT_SOURCE_DIR}/sources/SourceP.cpp
+#)
+#target_link_libraries(
+#  ${PROJECT_NAME}Demo1
+#  ${PROJECT_NAME}
+#)
 
 
 add_executable(
